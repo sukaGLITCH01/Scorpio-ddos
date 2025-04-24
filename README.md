@@ -1,6 +1,6 @@
 # SCORPIO DDOS v2 EXTREME
 
-**SCORPIO DDOS v2 EXTREME** adalah tools edukatif berbasis Python yang dirancang untuk melakukan simulasi serangan DDoS (Distributed Denial of Service) ke alamat IP target menggunakan berbagai metode. Tools ini dibuat untuk menyerang situs web judi online, saya tidak bertanggung jawab jika ada penyalahgunaan tools ini
+**SCORPIO DDOS v2 EXTREME** adalah tools edukatif berbasis Python yang dirancang untuk melakukan serangan DDoS (Distributed Denial of Service) ke alamat IP target menggunakan berbagai metode. Tools ini dibuat untuk menyerang situs web judi online, saya tidak bertanggung jawab jika ada penyalahgunaan tools ini
 
 
 ## TERIMAKASIH 
