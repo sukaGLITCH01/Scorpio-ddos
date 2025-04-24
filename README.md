@@ -1,23 +1,34 @@
-Scorpio DDOS v2 EXTREME
+# SCORPIO DDOS v2 EXTREME
 
-Scorpio DDOS v2 EXTREME adalah alat yang dirancang untuk tujuan edukasi dan simulasi serangan DDoS terhadap situs web. Alat ini dilengkapi dengan beberapa metode serangan dan dapat digunakan untuk menguji ketahanan server atau aplikasi terhadap berbagai macam serangan.
-
-> Peringatan: Tool ini hanya boleh digunakan untuk tujuan legal dan edukatif. Jangan gunakan untuk menyerang situs atau server yang tidak Anda miliki izin untuk mengujinya. Penggunaan tidak sah dapat menyebabkan kerusakan hukum. Pengembang tidak bertanggung jawab atas penyalahgunaan dari alat ini.
+**SCORPIO DDOS v2 EXTREME** adalah tools edukatif berbasis Python yang dirancang untuk melakukan simulasi serangan DDoS (Distributed Denial of Service) ke alamat IP target menggunakan berbagai metode. Tools ini dibuat untuk menyerang situs web judi online, saya tidak bertanggung jawab jika ada penyalahgunaan tools ini
 
 
+## TERIMAKASIH 
+ - PYSCODES 
+ - ERRYX
+ - SMILLING_404
+ - M FARKHAN
+ - MR.CULA
 
-Fitur Utama
+## FITUR 🦂
+- Metode serangan:
+  - TCP Flood
+  - HTTP GET/POST/HEAD
+  - SYN Flood
+  - Smurf Attack 
+  - Ping of Death
+- Statistik serangan (sukses/gagal)
 
-Serangan TCP Flood
 
-HTTP Request Flood (GET, POST, HEAD)
+## PERINGATAN ⚠️
+**Tools ini hanya boleh digunakan untuk edukasi dan pengujian pada sistem milik sendiri atau yang telah diberikan izin. Penyalahgunaan tools ini adalah tanggung jawab pengguna.**
 
-SYN Flood
+---
 
-Smurf Attack
+## INSTALASI 💣
 
-Ping of Death
-
-Multiple Threads untuk meningkatkan kekuatan serangan
-
-Pengaturan Durasi dan Metode Serangan 
+1. Clone repository ini atau download file `.py`-nya.
+2. Install dependencies:
+  
+   pip install -r requirements.txt
+python scorpio_ddos_v2.py 
